@@ -1,0 +1,17 @@
+pipeline{
+    agent any{
+    }
+    stages{
+        stage("Ejecutar el pipeline"){
+            steps{
+                script{
+                    def branchName =  env.BRANCH_NAME ?: 'develop'
+                    library 'devops@' + branchName
+                    def result = pipelineGeneral()
+                    echo "El resultado del pipelineGeneral es: ${result}"
+                    
+                }
+            }
+        }
+    }
+    
