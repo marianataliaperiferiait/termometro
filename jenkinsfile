@@ -1,3 +1,4 @@
  @Library('devops')
- def scmUrl = 'https://github.com/marianataliaperiferiait/devops.git'
+ def scmUrl = 'https://github.com/marianataliaperiferiait/termometro'
  pipelineGeneral(scmUrl:scmUrl)
+ 
